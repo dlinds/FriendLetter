@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Create a Custom Postcard!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1>Fill in your name and your friend's name to create your custom postcard!</h1>
+  <form action="/postcard" method="post">
+    <label for="sender">Sender's Name</label>
+    <input id="sender" name="sender" type="text">
+    <label for="recipient">Recipient's Name</label>
+    <input id="recipient" name="recipient" type="text">
+    <label for="vacationLocations">Which place did you vacation at?</label>
+
+    @* <select id="vacationLocations" name="vacationLocations">
+      <option name="paris">Paris</option>
+      <option name="melbourne">Melbourne</option>
+      <option name="antartica">Antartica</option>
+      <option name="theMoon">The Moon</option>
+      </select> *@
+
+    <h4>Vacation Locations</h4>
+    <div class="form-check">
+      <input class="form-check-input" name="vacationLocations" type="checkbox" value="theMoon" id="theMoon">
+      <label class="form-check-label" for="theMoon">
+        The Moon
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" name="vacationLocations" type="checkbox" value="melbourne" id="melbourne">
+      <label class="form-check-label" for="melbourne">
+        Melbourne
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" name="vacationLocations" type="checkbox" value="antarctica" id="antarctica">
+      <label class="form-check-label" for="antarctica">
+        Antarctica
+      </label>
+    </div>
+    <label for="souvenir">What did you bring back?</label>
+    <input type="text" name="souvenir" id="souvenir">
+    <button type="submit">Go!</button>
+  </form>
+</body>
+
+</html>
